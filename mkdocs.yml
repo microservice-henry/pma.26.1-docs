@@ -1,0 +1,54 @@
+site_name: Order API — Henry Idesis
+site_url: https://microservice-henry.github.io/pma.26.1-docs/
+site_author: Henry Idesis
+site_description: Documentação individual — PMA 26.1 | Order API
+
+theme:
+  name: material
+  language: pt
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Alternar para modo escuro
+    - scheme: slate
+      primary: deep purple
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Alternar para modo claro
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.sections
+    - content.code.copy
+    - content.code.annotate
+
+markdown_extensions:
+  - admonition
+  - tables
+  - attr_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+
+nav:
+  - Home: index.md
+  - Arquitetura: architecture.md
+  - Order API:
+      - Visão Geral: order/index.md
+      - Endpoints: order/endpoints.md
+      - Como Rodar: order/run.md
+  - Product API: product/index.md
+  - Exchange API: exchange/index.md
+  - Bottlenecks: bottlenecks.md
