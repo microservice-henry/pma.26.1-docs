@@ -12,31 +12,29 @@
         <meta name="author" content="Henry Idesis">
       
       
-        <link rel="canonical" href="https://microservice-henry.github.io/pma.26.1-docs/order/run/">
+        <link rel="canonical" href="https://microservice-henry.github.io/pma.26.1-docs/custos/">
       
       
-        <link rel="prev" href="../endpoints/">
+        <link rel="prev" href="../infra/cicd/">
       
-      
-        <link rel="next" href="../../product/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Como Rodar - Order API — Henry Idesis</title>
+        <title>Custos e SLA - Order API — Henry Idesis</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-rodar" class="md-skip">
+        <a href="#custos-e-sla" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -96,7 +94,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
-    <a href="../.." title="Order API — Henry Idesis" class="md-header__button md-logo" aria-label="Order API — Henry Idesis" data-md-component="logo">
+    <a href=".." title="Order API — Henry Idesis" class="md-header__button md-logo" aria-label="Order API — Henry Idesis" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -116,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Como Rodar
+              Custos e SLA
             
           </span>
         </div>
@@ -209,7 +207,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href=".." class="md-tabs__link">
         
   
   
@@ -228,7 +226,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../architecture/" class="md-tabs__link">
+      <a href="../architecture/" class="md-tabs__link">
         
   
   
@@ -245,13 +243,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../order/" class="md-tabs__link">
           
   
   
@@ -269,7 +265,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../product/" class="md-tabs__link">
+      <a href="../product/" class="md-tabs__link">
         
   
   
@@ -288,7 +284,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../exchange/" class="md-tabs__link">
+      <a href="../exchange/" class="md-tabs__link">
         
   
   
@@ -307,7 +303,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../bottlenecks/" class="md-tabs__link">
+      <a href="../bottlenecks/" class="md-tabs__link">
         
   
   
@@ -328,7 +324,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../infra/aws/" class="md-tabs__link">
+        <a href="../infra/aws/" class="md-tabs__link">
           
   
   
@@ -344,9 +340,11 @@
   
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../../custos/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
   
@@ -387,7 +385,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Order API — Henry Idesis" class="md-nav__button md-logo" aria-label="Order API — Henry Idesis" data-md-component="logo">
+    <a href=".." title="Order API — Henry Idesis" class="md-nav__button md-logo" aria-label="Order API — Henry Idesis" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -405,7 +403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -432,7 +430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../architecture/" class="md-nav__link">
+      <a href="../architecture/" class="md-nav__link">
         
   
   
@@ -456,31 +454,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -498,7 +491,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -516,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../order/" class="md-nav__link">
         
   
   
@@ -544,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../endpoints/" class="md-nav__link">
+      <a href="../order/endpoints/" class="md-nav__link">
         
   
   
@@ -569,37 +562,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Como Rodar
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../order/run/" class="md-nav__link">
         
   
   
@@ -615,92 +581,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#pre-requisitos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pré-requisitos
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#variaveis-de-ambiente" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Variáveis de Ambiente
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#subindo-o-stack-completo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Subindo o Stack Completo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#subindo-apenas-o-order-service" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Subindo Apenas o Order Service
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#testes-unitarios" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Testes Unitários
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cicd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CI/CD
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -720,7 +600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../product/" class="md-nav__link">
+      <a href="../product/" class="md-nav__link">
         
   
   
@@ -747,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../exchange/" class="md-nav__link">
+      <a href="../exchange/" class="md-nav__link">
         
   
   
@@ -774,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bottlenecks/" class="md-nav__link">
+      <a href="../bottlenecks/" class="md-nav__link">
         
   
   
@@ -853,7 +733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../infra/aws/" class="md-nav__link">
+      <a href="../infra/aws/" class="md-nav__link">
         
   
   
@@ -881,7 +761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../infra/eks/" class="md-nav__link">
+      <a href="../infra/eks/" class="md-nav__link">
         
   
   
@@ -909,7 +789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../infra/cicd/" class="md-nav__link">
+      <a href="../infra/cicd/" class="md-nav__link">
         
   
   
@@ -941,10 +821,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../custos/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custos e SLA
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -960,6 +867,92 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-de-servico-paas-vs-iaas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelo de Serviço (PaaS vs IaaS)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estimativa-de-custos-por-hora" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estimativa de Custos por Hora
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custo-estimado-por-evento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custo Estimado por Evento
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrategia-de-teardown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estratégia de Teardown
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sla-dos-servicos-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SLA dos Serviços AWS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparativo-docker-compose-local-vs-eks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparativo: Docker Compose Local vs EKS
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -991,10 +984,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pre-requisitos" class="md-nav__link">
+  <a href="#modelo-de-servico-paas-vs-iaas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pré-requisitos
+        Modelo de Serviço (PaaS vs IaaS)
       
     </span>
   </a>
@@ -1002,10 +995,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#variaveis-de-ambiente" class="md-nav__link">
+  <a href="#estimativa-de-custos-por-hora" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Variáveis de Ambiente
+        Estimativa de Custos por Hora
       
     </span>
   </a>
@@ -1013,10 +1006,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#subindo-o-stack-completo" class="md-nav__link">
+  <a href="#custo-estimado-por-evento" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Subindo o Stack Completo
+        Custo Estimado por Evento
       
     </span>
   </a>
@@ -1024,10 +1017,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#subindo-apenas-o-order-service" class="md-nav__link">
+  <a href="#estrategia-de-teardown" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Subindo Apenas o Order Service
+        Estratégia de Teardown
       
     </span>
   </a>
@@ -1035,10 +1028,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#testes-unitarios" class="md-nav__link">
+  <a href="#sla-dos-servicos-aws" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Testes Unitários
+        SLA dos Serviços AWS
       
     </span>
   </a>
@@ -1046,10 +1039,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cicd" class="md-nav__link">
+  <a href="#comparativo-docker-compose-local-vs-eks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        CI/CD
+        Comparativo: Docker Compose Local vs EKS
       
     </span>
   </a>
@@ -1073,136 +1066,227 @@
 
 
 
-<h1 id="como-rodar">Como Rodar</h1>
-<h2 id="pre-requisitos">Pré-requisitos</h2>
-<ul>
-<li>Docker e Docker Compose instalados</li>
-<li>Arquivo <code>api/.env</code> criado (veja abaixo)</li>
-</ul>
-<h2 id="variaveis-de-ambiente">Variáveis de Ambiente</h2>
-<p>Crie o arquivo <code>api/.env</code> — <strong>nunca commite este arquivo</strong> (está no <code>.gitignore</code>):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>DB_USER=store
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>DB_NAME=store
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>DB_PASSWORD=COLOQUE_SUA_SENHA_AQUI
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>JWT_SECRET_KEY=COLOQUE_SUA_CHAVE_AQUI
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>VOLUME_DB=./volume
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>SETUP=./setup
-</code></pre></div>
-<div class="admonition danger">
-<p class="admonition-title">Segredos</p>
-<p>Nunca coloque senhas reais em arquivos que serão commitados. O <code>.env</code> está no <code>.gitignore</code> justamente para isso.</p>
+<h1 id="custos-e-sla">Custos e SLA</h1>
+<h2 id="modelo-de-servico-paas-vs-iaas">Modelo de Serviço (PaaS vs IaaS)</h2>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Modelo</th>
+<th>Quem gerencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EKS Control Plane</td>
+<td><strong>PaaS</strong></td>
+<td>AWS gerencia master nodes, etcd, API server</td>
+</tr>
+<tr>
+<td>EC2 Node Group</td>
+<td>IaaS</td>
+<td>Você gerencia os workers</td>
+</tr>
+<tr>
+<td>NLB</td>
+<td><strong>PaaS</strong></td>
+<td>AWS gerencia roteamento e failover</td>
+</tr>
+<tr>
+<td>Docker Hub</td>
+<td><strong>PaaS</strong></td>
+<td>Docker Inc. gerencia o registry</td>
+</tr>
+<tr>
+<td>PostgreSQL em pod K8s</td>
+<td>IaaS</td>
+<td>Você gerencia backup, HA, atualizações</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Por que EKS é PaaS?</p>
+<p>Com EKS, você não gerencia os master nodes do Kubernetes — a AWS cuida de alta disponibilidade, patches e atualizações do control plane. Você só gerencia o que roda nos workers.</p>
 </div>
-<h2 id="subindo-o-stack-completo">Subindo o Stack Completo</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>api
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>--build
+<hr />
+<h2 id="estimativa-de-custos-por-hora">Estimativa de Custos por Hora</h2>
+<p>Valores de referência (us-east-2, Mai/2026 — consulte a calculadora AWS para valores atualizados):</p>
+<table>
+<thead>
+<tr>
+<th>Recurso</th>
+<th>Tipo</th>
+<th>Qtd</th>
+<th>Custo/hora</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EKS Control Plane</td>
+<td>PaaS</td>
+<td>1 cluster</td>
+<td>$0,10</td>
+</tr>
+<tr>
+<td>EC2 Workers</td>
+<td><code>t3.medium</code></td>
+<td>1 node</td>
+<td>$0,0416</td>
+</tr>
+<tr>
+<td>NLB</td>
+<td>Network Load Balancer</td>
+<td>1</td>
+<td>$0,008 + tráfego</td>
+</tr>
+<tr>
+<td><strong>Total estimado</strong></td>
+<td></td>
+<td></td>
+<td><strong>~$0,15/hora</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Cluster <code>eks-store</code> ativo em <code>us-east-2</code> com node group <code>ng-store</code> (<code>t3.medium × 1</code>). Valores baseados no pricing público AWS Mai/2026.</p>
+</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">GitHub Pages (docs) = PaaS gratuito</p>
+<p>A documentação deste projeto é servida via <strong>GitHub Pages</strong> — PaaS gratuito para repositórios públicos, sem custo adicional.</p>
+</div>
+<hr />
+<h2 id="custo-estimado-por-evento">Custo Estimado por Evento</h2>
+<table>
+<thead>
+<tr>
+<th>Cenário</th>
+<th>Duração</th>
+<th>Custo estimado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apresentação (cluster ativo)</td>
+<td>~2 horas</td>
+<td>$0,15 × 2</td>
+</tr>
+<tr>
+<td>Semana de testes</td>
+<td>~8h/dia × 5 dias</td>
+<td>$0,15 × 40</td>
+</tr>
+<tr>
+<td>Cluster esquecido ligado</td>
+<td>720h (1 mês)</td>
+<td>⚠️ $0,15 × 720</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="estrategia-de-teardown">Estratégia de Teardown</h2>
+<p>Para evitar custos após a apresentação. <strong>O comando exato para o node group</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>aws<span class="w"> </span>eks<span class="w"> </span>delete-nodegroup<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span>--cluster-name<span class="w"> </span>eks-store<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span>--nodegroup-name<span class="w"> </span>ng-store<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span>--region<span class="w"> </span>us-east-2<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span>--no-wait
 </code></pre></div>
+<p>Ordem completa:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># 1. Deletar services LoadBalancer (libera o NLB)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>kubectl<span class="w"> </span>delete<span class="w"> </span>svc<span class="w"> </span>gateway
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># 2. Deletar deployments</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>kubectl<span class="w"> </span>delete<span class="w"> </span>deployment<span class="w"> </span>--all
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># 3. Deletar node group (para EC2s)</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>eksctl<span class="w"> </span>delete<span class="w"> </span>nodegroup<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span>--cluster<span class="w"> </span>eks-store<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span>--name<span class="w"> </span>ng-store<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">  </span>--region<span class="w"> </span>us-east-2
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="c1"># 4. Deletar cluster EKS (para control plane)</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>eksctl<span class="w"> </span>delete<span class="w"> </span>cluster<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">  </span>--name<span class="w"> </span>eks-store<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">  </span>--region<span class="w"> </span>us-east-2
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="c1"># 5. Confirmar que não há recursos órfãos</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>aws<span class="w"> </span>ec2<span class="w"> </span>describe-instances<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">  </span>--query<span class="w"> </span><span class="s1">&#39;Reservations[*].Instances[*].[InstanceId,State.Name,InstanceType]&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">  </span>--output<span class="w"> </span>table
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>aws<span class="w"> </span>elbv2<span class="w"> </span>describe-load-balancers<span class="w"> </span>--output<span class="w"> </span>table
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Verifique sempre após deletar</p>
+<p>Load Balancers e EBS volumes podem persistir mesmo após <code>eksctl delete cluster</code>. Verifique no Console AWS → EC2 → Load Balancers e EC2 → Volumes.</p>
+</div>
+<hr />
+<h2 id="sla-dos-servicos-aws">SLA dos Serviços AWS</h2>
 <table>
 <thead>
 <tr>
 <th>Serviço</th>
-<th>Porta</th>
+<th>SLA AWS</th>
+<th>Impacto se cair</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Gateway</td>
-<td><code>8080</code></td>
+<td>EKS Control Plane</td>
+<td>99,95%</td>
+<td>Deploys e scaling param</td>
 </tr>
 <tr>
-<td>Order Service</td>
-<td><code>8085</code> (direto, sem gateway)</td>
+<td>EC2 (nodes)</td>
+<td>99,99%</td>
+<td>Pods ficam offline</td>
 </tr>
 <tr>
-<td>PostgreSQL</td>
-<td><code>5432</code></td>
-</tr>
-<tr>
-<td>Product (WireMock)</td>
-<td>interno</td>
-</tr>
-<tr>
-<td>Exchange (WireMock)</td>
-<td>interno</td>
+<td>NLB</td>
+<td>99,99%</td>
+<td>API inacessível externamente</td>
 </tr>
 </tbody>
 </table>
-<h2 id="subindo-apenas-o-order-service">Subindo Apenas o Order Service</h2>
-<p>Para desenvolvimento isolado, as dependências externas são servidas por WireMock:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">cd</span><span class="w"> </span>api
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>--build<span class="w"> </span>order<span class="w"> </span>product<span class="w"> </span>exchange<span class="w"> </span>db
-</code></pre></div>
-<p>Os mocks respondem:</p>
+<p>O SLA composto da aplicação é limitado pelo componente mais frágil. Com EKS + NLB, o SLA teórico é <strong>≤ 99,95%</strong> — ou seja, até ~4,4 horas de downtime por ano no pior caso.</p>
+<hr />
+<h2 id="comparativo-docker-compose-local-vs-eks">Comparativo: Docker Compose Local vs EKS</h2>
 <table>
 <thead>
 <tr>
-<th>Endpoint mockado</th>
-<th>Resposta</th>
+<th>Aspecto</th>
+<th>Docker Compose</th>
+<th>EKS</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>GET /products/0195abfb-7074-73a9-9d26-b4b9fbaab0a8</code></td>
-<td><code>{"id": "...", "price": 10.12}</code></td>
+<td>Custo</td>
+<td>$0 (local)</td>
+<td>~$0,15/hora</td>
 </tr>
 <tr>
-<td><code>GET /products/id-inexistente</code></td>
-<td><code>404 Not Found</code></td>
+<td>Escalabilidade</td>
+<td>Manual</td>
+<td>Automática (HPA)</td>
 </tr>
 <tr>
-<td><code>GET /exchange?from=USD&amp;to=BRL</code></td>
-<td><code>{"rate": 6.0}</code></td>
+<td>Alta disponibilidade</td>
+<td>Não</td>
+<td>Sim (multi-node)</td>
 </tr>
 <tr>
-<td><code>GET /exchange?from=USD&amp;to=&lt;inválido&gt;</code></td>
-<td><code>404 Not Found</code></td>
+<td>Complexidade operacional</td>
+<td>Baixa</td>
+<td>Média/Alta</td>
+</tr>
+<tr>
+<td>Adequado para</td>
+<td>Desenvolvimento</td>
+<td>Produção</td>
 </tr>
 </tbody>
 </table>
-<h2 id="testes-unitarios">Testes Unitários</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cd</span><span class="w"> </span>api/order-service
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>mvn<span class="w"> </span><span class="nb">test</span>
-</code></pre></div>
-<p>Os 6 testes cobrem os cenários críticos de negócio:</p>
-<table>
-<thead>
-<tr>
-<th>Teste</th>
-<th>Cenário verificado</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>shouldReturn400WhenProductDoesNotExist</code></td>
-<td>Produto não encontrado → 400</td>
-</tr>
-<tr>
-<td><code>shouldReturn502WhenProductServiceIsUnavailable</code></td>
-<td>Product Service fora do ar → 502</td>
-</tr>
-<tr>
-<td><code>shouldFilterOrdersByAuthenticatedAccount</code></td>
-<td>Isolamento por conta</td>
-</tr>
-<tr>
-<td><code>shouldReturn404WhenOrderDoesNotBelongToAccount</code></td>
-<td>Pedido de outra conta → 404</td>
-</tr>
-<tr>
-<td><code>shouldReturn422WhenCurrencyIsInvalid</code></td>
-<td>Moeda inválida → 422</td>
-</tr>
-<tr>
-<td><code>shouldKeepUsdValuesWhenExchangeServiceIsUnavailable</code></td>
-<td>Exchange fora do ar → fallback USD</td>
-</tr>
-</tbody>
-</table>
-<h2 id="cicd">CI/CD</h2>
-<p>O pipeline Jenkins está em <code>api/order-service/Jenkinsfile</code> e executa 3 estágios:</p>
-<pre class="mermaid"><code>graph LR
-    A[Dependencies\ninstala módulo order] --&gt; B[Build\nmvn package]
-    B --&gt; C[Build &amp; Push Image\nhenryidesis/order:latest]</code></pre>
-<p>A imagem é publicada no Docker Hub como <code>henryidesis/order:latest</code> com suporte multi-arquitetura (<code>linux/amd64</code> + <code>linux/arm64</code>).</p>
 
 
 
@@ -1258,10 +1342,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.sections", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.sections", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

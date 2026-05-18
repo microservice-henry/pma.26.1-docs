@@ -18,6 +18,8 @@
         <link rel="prev" href="../exchange/">
       
       
+        <link rel="next" href="../infra/aws/">
+      
       
         
       
@@ -312,6 +314,45 @@
     
   
   Bottlenecks
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../infra/aws/" class="md-tabs__link">
+          
+  
+  
+  Infraestrutura
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../custos/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Custos e SLA
 
       </a>
     </li>
@@ -675,22 +716,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-latencia-do-exchange-service" class="md-nav__link">
+  <a href="#1-observabilidade-latencia-invisivel-do-gateway" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Latência do Exchange Service
+        1. Observabilidade: Latência invisível do Gateway
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Latência do Exchange Service">
+    <nav class="md-nav" aria-label="1. Observabilidade: Latência invisível do Gateway">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#problema" class="md-nav__link">
+  <a href="#o-problema" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Problema
+        O problema
       
     </span>
   </a>
@@ -698,10 +739,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#solucao-adotada" class="md-nav__link">
+  <a href="#a-solucao-implementada" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Solução Adotada
+        A solução implementada
       
     </span>
   </a>
@@ -709,10 +750,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#melhoria-futura" class="md-nav__link">
+  <a href="#fluxo-de-observabilidade" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Melhoria Futura
+        Fluxo de observabilidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resultado
       
     </span>
   </a>
@@ -725,22 +777,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-acoplamento-sincrono-com-o-product-service" class="md-nav__link">
+  <a href="#2-resiliencia-fallback-gracioso-quando-exchange-service-cai" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Acoplamento Síncrono com o Product Service
+        2. Resiliência: Fallback gracioso quando Exchange Service cai
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Acoplamento Síncrono com o Product Service">
+    <nav class="md-nav" aria-label="2. Resiliência: Fallback gracioso quando Exchange Service cai">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#problema_1" class="md-nav__link">
+  <a href="#o-problema_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Problema
+        O problema
       
     </span>
   </a>
@@ -748,10 +800,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#solucao-adotada_1" class="md-nav__link">
+  <a href="#a-solucao-implementada_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Solução Adotada
+        A solução implementada
       
     </span>
   </a>
@@ -759,10 +811,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#melhoria-futura_1" class="md-nav__link">
+  <a href="#diagrama-de-decisao" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Melhoria Futura
+        Diagrama de decisão
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultado_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resultado
       
     </span>
   </a>
@@ -774,10 +837,241 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3-performance-indices-no-banco-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Performance: Índices no banco de dados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Performance: Índices no banco de dados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-problema_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O problema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-solucao-implementada_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A solução implementada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultado_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resultado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#melhorias-futuras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Melhorias Futuras
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infraestrutura
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Infraestrutura
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infra/aws/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infra/eks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EKS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infra/cicd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CI/CD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custos e SLA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -809,22 +1103,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-latencia-do-exchange-service" class="md-nav__link">
+  <a href="#1-observabilidade-latencia-invisivel-do-gateway" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Latência do Exchange Service
+        1. Observabilidade: Latência invisível do Gateway
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Latência do Exchange Service">
+    <nav class="md-nav" aria-label="1. Observabilidade: Latência invisível do Gateway">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#problema" class="md-nav__link">
+  <a href="#o-problema" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Problema
+        O problema
       
     </span>
   </a>
@@ -832,10 +1126,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#solucao-adotada" class="md-nav__link">
+  <a href="#a-solucao-implementada" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Solução Adotada
+        A solução implementada
       
     </span>
   </a>
@@ -843,10 +1137,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#melhoria-futura" class="md-nav__link">
+  <a href="#fluxo-de-observabilidade" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Melhoria Futura
+        Fluxo de observabilidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resultado
       
     </span>
   </a>
@@ -859,22 +1164,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-acoplamento-sincrono-com-o-product-service" class="md-nav__link">
+  <a href="#2-resiliencia-fallback-gracioso-quando-exchange-service-cai" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Acoplamento Síncrono com o Product Service
+        2. Resiliência: Fallback gracioso quando Exchange Service cai
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Acoplamento Síncrono com o Product Service">
+    <nav class="md-nav" aria-label="2. Resiliência: Fallback gracioso quando Exchange Service cai">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#problema_1" class="md-nav__link">
+  <a href="#o-problema_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Problema
+        O problema
       
     </span>
   </a>
@@ -882,10 +1187,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#solucao-adotada_1" class="md-nav__link">
+  <a href="#a-solucao-implementada_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Solução Adotada
+        A solução implementada
       
     </span>
   </a>
@@ -893,10 +1198,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#melhoria-futura_1" class="md-nav__link">
+  <a href="#diagrama-de-decisao" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Melhoria Futura
+        Diagrama de decisão
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultado_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resultado
       
     </span>
   </a>
@@ -905,6 +1221,67 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-performance-indices-no-banco-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Performance: Índices no banco de dados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Performance: Índices no banco de dados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-problema_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O problema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-solucao-implementada_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A solução implementada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultado_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resultado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#melhorias-futuras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Melhorias Futuras
+      
+    </span>
+  </a>
   
 </li>
       
@@ -926,88 +1303,210 @@
 
 
 <h1 id="bottlenecks">Bottlenecks</h1>
-<p>Dois gargalos identificados durante o desenvolvimento da Order API, com análise do problema e solução adotada.</p>
+<p>Gargalos identificados no projeto, com análise do problema, solução implementada e evidência no código real.</p>
 <hr />
-<h2 id="1-latencia-do-exchange-service">1. Latência do Exchange Service</h2>
-<h3 id="problema">Problema</h3>
-<p>Toda chamada a <code>GET /orders/{id}?currency=&lt;moeda&gt;</code> dispara uma requisição HTTP síncrona ao Exchange Service. Em produção, isso adiciona latência de rede em cada consulta com conversão — mesmo que a taxa de câmbio não mude por horas.</p>
-<pre class="mermaid"><code>sequenceDiagram
-    participant C as Cliente
-    participant OS as Order Service
-    participant ES as Exchange Service
-
-    C-&gt;&gt;OS: GET /orders/123?currency=BRL
-    OS-&gt;&gt;OS: busca pedido no banco (rápido)
-    OS-&gt;&gt;ES: GET /exchange?from=USD&amp;to=BRL
-    Note over OS,ES: latência de rede aqui
-    ES--&gt;&gt;OS: {rate: 6.0}
-    OS-&gt;&gt;OS: converte total × 6.0
-    OS--&gt;&gt;C: {currency: BRL, total: 121.44}</code></pre>
-<p>Com N consultas simultâneas buscando a mesma moeda, são N chamadas ao Exchange Service — a latência escala linearmente com a carga.</p>
-<h3 id="solucao-adotada">Solução Adotada</h3>
-<p>Implementado <strong>fallback gracioso</strong>: se o Exchange Service estiver indisponível (qualquer <code>FeignException</code> não mapeada), o serviço retorna os valores em USD sem lançar erro para o cliente.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">FeignException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="c1">// Exchange service unavailable — serve USD as fallback</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">BigDecimal</span><span class="p">.</span><span class="na">ONE</span><span class="p">;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span>
-</code></pre></div>
-<p>Isso evita que uma falha na dependência externa derrube o fluxo principal. O cliente recebe uma resposta válida (em USD) em vez de um erro 503.</p>
-<h3 id="melhoria-futura">Melhoria Futura</h3>
-<p>Cache em memória com TTL de 60 segundos no <code>ExchangeClient</code>. Taxas de câmbio raramente mudam em janelas de 1 minuto — uma única requisição ao Exchange Service por minuto substitui potencialmente centenas.</p>
+<h2 id="1-observabilidade-latencia-invisivel-do-gateway">1. Observabilidade: Latência invisível do Gateway</h2>
+<h3 id="o-problema">O problema</h3>
+<p>Sem métricas, é impossível saber se o Gateway está lento, qual rota tem mais tráfego ou quando ocorrem picos de latência. O sistema vira uma caixa-preta em produção.</p>
+<h3 id="a-solucao-implementada">A solução implementada</h3>
+<p>O Gateway expõe métricas no formato Prometheus via Spring Boot Actuator. O Prometheus coleta em intervalo de <strong>1 segundo</strong> e o Grafana visualiza em tempo real.</p>
+<p><strong>Configuração no <code>application.yaml</code> do gateway:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">spring</span><span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">cloud</span><span class="p">:</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">gateway</span><span class="p">:</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">      </span><span class="nt">metrics</span><span class="p">:</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">        </span><span class="c1"># habilita métricas por rota</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nt">management</span><span class="p">:</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="nt">endpoints</span><span class="p">:</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="nt">web</span><span class="p">:</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">      </span><span class="nt">base-path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/gateway/actuator</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">      </span><span class="nt">exposure</span><span class="p">:</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="nt">include</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;prometheus&#39;</span><span class="p p-Indicator">]</span><span class="w">   </span><span class="c1"># expõe endpoint /gateway/actuator/prometheus</span>
+</code></pre></div></p>
+<p><strong>Configuração no <code>api/setup/prometheus/prometheus.yml</code>:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">scrape_configs</span><span class="p">:</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">job_name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;GatewayMetrics&#39;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">metrics_path</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/gateway/actuator/prometheus&#39;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">scrape_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span><span class="w">        </span><span class="c1"># coleta a cada 1 segundo</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nt">static_configs</span><span class="p">:</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">targets</span><span class="p">:</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gateway:8080</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="nt">labels</span><span class="p">:</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">          </span><span class="nt">application</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Gateway</span><span class="nv"> </span><span class="s">Application&#39;</span>
+</code></pre></div></p>
+<p><strong>Serviços no <code>compose.yaml</code>:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">prometheus</span><span class="p">:</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">prom/prometheus:latest</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9090:9090</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${SETUP}/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="nt">grafana</span><span class="p">:</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">grafana/grafana:latest</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3000:3000</span>
+</code></pre></div></p>
+<h3 id="fluxo-de-observabilidade">Fluxo de observabilidade</h3>
+<pre class="mermaid"><code>graph LR
+    GW[Gateway :8080] --&gt;|/gateway/actuator/prometheus| Prom[Prometheus :9090]
+    Prom --&gt;|datasource| Graf[Grafana :3000]
+    Graf --&gt;|dashboard| Ops([Operador])</code></pre>
+<h3 id="resultado">Resultado</h3>
+<ul>
+<li>Métricas disponíveis: <code>spring.cloud.gateway.requests</code> (por rota, status, método)</li>
+<li>Latência de cada rota visível em tempo real</li>
+<li>Base para alertas de SLA (<code>[IMPLEMENTAR]</code> — configurar alertas no Grafana)</li>
+</ul>
 <hr />
-<h2 id="2-acoplamento-sincrono-com-o-product-service">2. Acoplamento Síncrono com o Product Service</h2>
-<h3 id="problema_1">Problema</h3>
-<p>A criação de pedido (<code>POST /orders</code>) requer uma chamada síncrona ao Product Service para cada item, a fim de obter o preço. Com pedidos de múltiplos itens, as chamadas são sequenciais — o tempo total cresce com o número de itens.</p>
-<pre class="mermaid"><code>sequenceDiagram
-    participant C as Cliente
-    participant OS as Order Service
-    participant PS as Product Service
-
-    C-&gt;&gt;OS: POST /orders [{p1, qty:2}, {p2, qty:5}]
-
-    OS-&gt;&gt;PS: GET /products/p1
-    PS--&gt;&gt;OS: {price: 10.12}
-
-    OS-&gt;&gt;PS: GET /products/p2
-    PS--&gt;&gt;OS: {price: 5.00}
-
-    OS-&gt;&gt;OS: calcula totais
-    OS--&gt;&gt;C: 201 Created</code></pre>
-<p>Se o Product Service estiver lento ou fora do ar, o <code>POST /orders</code> falha ou demora — mesmo que o produto seja válido e o preço já fosse conhecido.</p>
-<h3 id="solucao-adotada_1">Solução Adotada</h3>
-<p>O <code>ProductFeignConfig</code> classifica erros do Product Service com semântica precisa:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">methodKey</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="na">status</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">404</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ProductNotFoundException</span><span class="p">();</span><span class="w">    </span><span class="c1">// → 400 Bad Request</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ProductApiUnavailableException</span><span class="p">();</span><span class="w">  </span><span class="c1">// → 502 Bad Gateway</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">};</span>
-</code></pre></div>
+<h2 id="2-resiliencia-fallback-gracioso-quando-exchange-service-cai">2. Resiliência: Fallback gracioso quando Exchange Service cai</h2>
+<h3 id="o-problema_1">O problema</h3>
+<p>A conversão de moeda em <code>GET /orders/{id}?currency=BRL</code> depende de uma chamada síncrona ao Exchange Service. Se o serviço externo cair, sem tratamento o Order Service retornaria 500 para o cliente — derrubando uma funcionalidade central por culpa de uma dependência opcional.</p>
+<h3 id="a-solucao-implementada_1">A solução implementada</h3>
+<p>O <code>OrderService</code> implementa dois níveis de fallback:</p>
+<p><strong>Nível 1 — Exchange indisponível (qualquer FeignException não mapeada):</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// OrderService.java</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">FeignException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="c1">// Fallback to storage currency (USD) when exchange service is unavailable.</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">BigDecimal</span><span class="p">.</span><span class="na">ONE</span><span class="p">;</span><span class="w">  </span><span class="c1">// rate = 1 → sem conversão, retorna em USD</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Nível 2 — Moeda inválida (422) ou não encontrada (404):</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">FeignException</span><span class="p">.</span><span class="na">UnprocessableEntity</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ResponseStatusException</span><span class="p">(</span><span class="n">HttpStatus</span><span class="p">.</span><span class="na">UNPROCESSABLE_ENTITY</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Unsupported currency&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">FeignException</span><span class="p">.</span><span class="na">NotFound</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ResponseStatusException</span><span class="p">(</span><span class="n">HttpStatus</span><span class="p">.</span><span class="na">UNPROCESSABLE_ENTITY</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Unsupported currency&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Nível 3 — Product Service fora do ar (classificação precisa de erros):</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// ProductFeignConfig.java</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">methodKey</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="na">status</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">404</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ProductNotFoundException</span><span class="p">();</span><span class="w">    </span><span class="c1">// → 400 Bad Request</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ProductApiUnavailableException</span><span class="p">();</span><span class="w">  </span><span class="c1">// → 502 Bad Gateway</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">};</span>
+</code></pre></div></p>
+<h3 id="diagrama-de-decisao">Diagrama de decisão</h3>
+<pre class="mermaid"><code>flowchart TD
+    A[GET /orders/id?currency=BRL] --&gt; B{Exchange\ndisponível?}
+    B --&gt;|Sim| C{Moeda\nválida?}
+    C --&gt;|Sim| D[200 com conversão]
+    C --&gt;|422 ou 404| E[422 Unsupported currency]
+    B --&gt;|503 ou timeout| F[200 em USD — fallback]
+    B --&gt;|Outro FeignException| F</code></pre>
+<h3 id="resultado_1">Resultado</h3>
 <table>
 <thead>
 <tr>
-<th>Situação</th>
-<th>Status retornado</th>
-<th>Motivo</th>
+<th>Cenário</th>
+<th>Antes</th>
+<th>Depois</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Produto não existe</td>
-<td><code>400 Bad Request</code></td>
-<td>Erro do cliente — produto inválido</td>
+<td>Exchange fora do ar</td>
+<td>500 (crash)</td>
+<td>200 em USD (fallback)</td>
+</tr>
+<tr>
+<td>Moeda inválida</td>
+<td>500 (crash)</td>
+<td>422 com mensagem clara</td>
+</tr>
+<tr>
+<td>Product não encontrado</td>
+<td>500 (genérico)</td>
+<td>400 "Product does not exist"</td>
 </tr>
 <tr>
 <td>Product Service fora do ar</td>
-<td><code>502 Bad Gateway</code></td>
-<td>Erro de dependência externa</td>
+<td>500 (genérico)</td>
+<td>502 Bad Gateway</td>
 </tr>
 </tbody>
 </table>
-<p>Isso dá ao cliente informação precisa sobre a causa do erro, evitando confusão entre "produto inválido" e "serviço temporariamente indisponível".</p>
-<p>Adicionalmente, <strong>o preço é armazenado no <code>order_item</code> no momento da criação</strong> (<code>total</code> persistido no banco). Consultas futuras ao pedido não precisam consultar o Product Service — o valor já está fixado no banco de dados.</p>
-<h3 id="melhoria-futura_1">Melhoria Futura</h3>
-<p>Para a criação em si, um <strong>circuit breaker</strong> (ex: Resilience4j) poderia evitar cascata de falhas: após N falhas consecutivas, as chamadas ao Product Service são bloqueadas por um período, permitindo que o serviço se recupere sem sobrecarregar com requisições acumuladas.</p>
+<p>Cobertura de testes confirmada:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>shouldKeepUsdValuesWhenExchangeServiceIsUnavailable  ✅
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>shouldReturn422WhenCurrencyIsInvalid                 ✅
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>shouldReturn400WhenProductDoesNotExist               ✅
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>shouldReturn502WhenProductServiceIsUnavailable       ✅
+</code></pre></div></p>
+<hr />
+<h2 id="3-performance-indices-no-banco-de-dados">3. Performance: Índices no banco de dados</h2>
+<h3 id="o-problema_2">O problema</h3>
+<p>As duas queries mais frequentes da Order API são:</p>
+<ol>
+<li><code>findByIdAccountOrderByDateDesc(idAccount)</code> — lista todos os pedidos de uma conta, ordenado por data</li>
+<li><code>findByIdOrder(idOrder)</code> — busca os itens de um pedido</li>
+</ol>
+<p>Sem índices, ambas fazem <strong>full table scan</strong> — custo O(n) que degrada linearmente com o volume de dados.</p>
+<h3 id="a-solucao-implementada_2">A solução implementada</h3>
+<p>Migration <code>V2026.04.30.004__create_indexes.sql</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">-- Cobre o WHERE id_account = ? ORDER BY date DESC</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_orders_account_date</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">orders</span><span class="p">.</span><span class="n">orders</span><span class="w"> </span><span class="p">(</span><span class="n">id_account</span><span class="p">,</span><span class="w"> </span><span class="nb">date</span><span class="p">);</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1">-- Cobre o WHERE id_order = ?</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_order_items_order</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">orders</span><span class="p">.</span><span class="n">order_items</span><span class="w"> </span><span class="p">(</span><span class="n">id_order</span><span class="p">);</span>
+</code></pre></div>
+<p>O índice composto <code>(id_account, date)</code> é especialmente eficiente: satisfaz tanto o filtro por conta quanto a ordenação, evitando um sort separado.</p>
+<h3 id="resultado_2">Resultado</h3>
+<table>
+<thead>
+<tr>
+<th>Query</th>
+<th>Sem índice</th>
+<th>Com índice</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>findByIdAccountOrderByDateDesc</code></td>
+<td>Full scan + sort</td>
+<td>Index range scan + no sort</td>
+</tr>
+<tr>
+<td><code>findByIdOrder</code></td>
+<td>Full scan</td>
+<td>Index lookup</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="melhorias-futuras">Melhorias Futuras</h2>
+<table>
+<thead>
+<tr>
+<th>Melhoria</th>
+<th>Status</th>
+<th>Justificativa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cache no <code>ExchangeClient</code> (Redis, TTL 60s)</td>
+<td><code>[IMPLEMENTAR]</code></td>
+<td>Taxas de câmbio mudam raramente — 1 req/min substitui N req/min</td>
+</tr>
+<tr>
+<td>HPA no EKS (escala horizontal por CPU)</td>
+<td><code>[IMPLEMENTAR]</code></td>
+<td>Cluster <code>ng-store</code> com 1 node atualmente</td>
+</tr>
+<tr>
+<td>Circuit Breaker (Resilience4j) no <code>ProductClient</code></td>
+<td><code>[IMPLEMENTAR]</code></td>
+<td>Evita cascata de falhas em picos de erro</td>
+</tr>
+<tr>
+<td>Alertas no Grafana (latência &gt; threshold)</td>
+<td><code>[IMPLEMENTAR]</code></td>
+<td>Infraestrutura Prometheus/Grafana já está pronta</td>
+</tr>
+</tbody>
+</table>
 
 
 

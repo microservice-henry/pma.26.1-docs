@@ -13,7 +13,23 @@
          <lastmod>2026-05-18</lastmod>
     </url>
     <url>
+         <loc>https://microservice-henry.github.io/pma.26.1-docs/custos/</loc>
+         <lastmod>2026-05-18</lastmod>
+    </url>
+    <url>
          <loc>https://microservice-henry.github.io/pma.26.1-docs/exchange/</loc>
+         <lastmod>2026-05-18</lastmod>
+    </url>
+    <url>
+         <loc>https://microservice-henry.github.io/pma.26.1-docs/infra/aws/</loc>
+         <lastmod>2026-05-18</lastmod>
+    </url>
+    <url>
+         <loc>https://microservice-henry.github.io/pma.26.1-docs/infra/cicd/</loc>
+         <lastmod>2026-05-18</lastmod>
+    </url>
+    <url>
+         <loc>https://microservice-henry.github.io/pma.26.1-docs/infra/eks/</loc>
          <lastmod>2026-05-18</lastmod>
     </url>
     <url>

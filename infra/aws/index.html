@@ -12,13 +12,13 @@
         <meta name="author" content="Henry Idesis">
       
       
-        <link rel="canonical" href="https://microservice-henry.github.io/pma.26.1-docs/order/run/">
+        <link rel="canonical" href="https://microservice-henry.github.io/pma.26.1-docs/infra/aws/">
       
       
-        <link rel="prev" href="../endpoints/">
+        <link rel="prev" href="../../bottlenecks/">
       
       
-        <link rel="next" href="../../product/">
+        <link rel="next" href="../eks/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Como Rodar - Order API — Henry Idesis</title>
+        <title>AWS - Order API — Henry Idesis</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-rodar" class="md-skip">
+        <a href="#aws" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Como Rodar
+              AWS
             
           </span>
         </div>
@@ -245,13 +245,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../order/" class="md-tabs__link">
           
   
   
@@ -324,11 +322,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../infra/aws/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -456,31 +456,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -498,7 +493,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -516,7 +511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../order/" class="md-nav__link">
         
   
   
@@ -544,7 +539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../endpoints/" class="md-nav__link">
+      <a href="../../order/endpoints/" class="md-nav__link">
         
   
   
@@ -569,37 +564,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Como Rodar
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../order/run/" class="md-nav__link">
         
   
   
@@ -615,92 +583,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#pre-requisitos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pré-requisitos
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#variaveis-de-ambiente" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Variáveis de Ambiente
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#subindo-o-stack-completo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Subindo o Stack Completo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#subindo-apenas-o-order-service" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Subindo Apenas o Order Service
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#testes-unitarios" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Testes Unitários
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cicd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CI/CD
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -798,26 +680,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
   
@@ -835,7 +722,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -850,10 +737,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../infra/aws/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -869,6 +783,98 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conta-e-acesso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conta e Acesso
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conta e Acesso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracao-local-aws-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuração local (AWS CLI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protecao-de-credenciais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proteção de credenciais
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regiao-e-servicos-utilizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Região e Serviços Utilizados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagrama-de-arquitetura-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrama de Arquitetura AWS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teardown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teardown
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -881,7 +887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../infra/eks/" class="md-nav__link">
+      <a href="../eks/" class="md-nav__link">
         
   
   
@@ -909,7 +915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../infra/cicd/" class="md-nav__link">
+      <a href="../cicd/" class="md-nav__link">
         
   
   
@@ -991,10 +997,49 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pre-requisitos" class="md-nav__link">
+  <a href="#conta-e-acesso" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pré-requisitos
+        Conta e Acesso
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conta e Acesso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracao-local-aws-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuração local (AWS CLI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protecao-de-credenciais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proteção de credenciais
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regiao-e-servicos-utilizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Região e Serviços Utilizados
       
     </span>
   </a>
@@ -1002,10 +1047,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#variaveis-de-ambiente" class="md-nav__link">
+  <a href="#diagrama-de-arquitetura-aws" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Variáveis de Ambiente
+        Diagrama de Arquitetura AWS
       
     </span>
   </a>
@@ -1013,43 +1058,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#subindo-o-stack-completo" class="md-nav__link">
+  <a href="#teardown" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Subindo o Stack Completo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#subindo-apenas-o-order-service" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Subindo Apenas o Order Service
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#testes-unitarios" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Testes Unitários
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cicd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CI/CD
+        Teardown
       
     </span>
   </a>
@@ -1073,136 +1085,139 @@
 
 
 
-<h1 id="como-rodar">Como Rodar</h1>
-<h2 id="pre-requisitos">Pré-requisitos</h2>
-<ul>
-<li>Docker e Docker Compose instalados</li>
-<li>Arquivo <code>api/.env</code> criado (veja abaixo)</li>
-</ul>
-<h2 id="variaveis-de-ambiente">Variáveis de Ambiente</h2>
-<p>Crie o arquivo <code>api/.env</code> — <strong>nunca commite este arquivo</strong> (está no <code>.gitignore</code>):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>DB_USER=store
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>DB_NAME=store
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>DB_PASSWORD=COLOQUE_SUA_SENHA_AQUI
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>JWT_SECRET_KEY=COLOQUE_SUA_CHAVE_AQUI
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>VOLUME_DB=./volume
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>SETUP=./setup
-</code></pre></div>
+<h1 id="aws">AWS</h1>
+<h2 id="conta-e-acesso">Conta e Acesso</h2>
+<p>A conta AWS foi criada especificamente para o projeto. O acesso programático é feito via <strong>IAM user</strong> com permissões suficientes para gerenciar EKS, EC2 e NLB.</p>
 <div class="admonition danger">
-<p class="admonition-title">Segredos</p>
-<p>Nunca coloque senhas reais em arquivos que serão commitados. O <code>.env</code> está no <code>.gitignore</code> justamente para isso.</p>
+<p class="admonition-title">Segredos nunca no código</p>
+<p>As credenciais AWS <strong>nunca</strong> aparecem em arquivos commitados. São configuradas localmente via <code>aws configure</code> e no Jenkins via credenciais gerenciadas pela plataforma.</p>
 </div>
-<h2 id="subindo-o-stack-completo">Subindo o Stack Completo</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>api
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>--build
+<h3 id="configuracao-local-aws-cli">Configuração local (AWS CLI)</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>aws<span class="w"> </span>configure
 </code></pre></div>
+<p>Preencha com seus valores reais — <strong>nunca coloque no repositório</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>AWS Access Key ID:     YOUR_ACCESS_KEY_ID
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>AWS Secret Access Key: YOUR_SECRET_ACCESS_KEY
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Default region name:   us-east-2
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Default output format: json
+</code></pre></div>
+<p>O CLI armazena essas informações em <code>~/.aws/credentials</code> (fora do repositório).</p>
+<h3 id="protecao-de-credenciais">Proteção de credenciais</h3>
 <table>
 <thead>
 <tr>
-<th>Serviço</th>
-<th>Porta</th>
+<th>Mecanismo</th>
+<th>Onde</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Gateway</td>
-<td><code>8080</code></td>
+<td><code>~/.aws/credentials</code> local</td>
+<td>Fora do repositório (gitignore global)</td>
 </tr>
 <tr>
-<td>Order Service</td>
-<td><code>8085</code> (direto, sem gateway)</td>
+<td>Jenkins Credentials</td>
+<td>Configuradas na UI do Jenkins — nunca em Jenkinsfile</td>
 </tr>
 <tr>
-<td>PostgreSQL</td>
-<td><code>5432</code></td>
+<td><code>.env</code></td>
+<td>No <code>.gitignore</code> do projeto — contém apenas variáveis de runtime</td>
 </tr>
 <tr>
-<td>Product (WireMock)</td>
-<td>interno</td>
-</tr>
-<tr>
-<td>Exchange (WireMock)</td>
-<td>interno</td>
+<td><code>secrets.example.yaml</code></td>
+<td>Somente placeholders (<code>change-me</code>) commitados</td>
 </tr>
 </tbody>
 </table>
-<h2 id="subindo-apenas-o-order-service">Subindo Apenas o Order Service</h2>
-<p>Para desenvolvimento isolado, as dependências externas são servidas por WireMock:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">cd</span><span class="w"> </span>api
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>--build<span class="w"> </span>order<span class="w"> </span>product<span class="w"> </span>exchange<span class="w"> </span>db
-</code></pre></div>
-<p>Os mocks respondem:</p>
+<p><img alt="Permissões IAM do usuário AWS do projeto" src="../img/iam-permissions.png" />
+<em>Console AWS → IAM → Users — políticas e permissões do usuário do projeto</em></p>
+<hr />
+<h2 id="regiao-e-servicos-utilizados">Região e Serviços Utilizados</h2>
 <table>
 <thead>
 <tr>
-<th>Endpoint mockado</th>
-<th>Resposta</th>
+<th>Serviço AWS</th>
+<th>Função no Projeto</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>GET /products/0195abfb-7074-73a9-9d26-b4b9fbaab0a8</code></td>
-<td><code>{"id": "...", "price": 10.12}</code></td>
+<td><strong>EKS</strong></td>
+<td>Orquestração dos microsserviços em Kubernetes</td>
 </tr>
 <tr>
-<td><code>GET /products/id-inexistente</code></td>
-<td><code>404 Not Found</code></td>
+<td><strong>EC2</strong> (node group)</td>
+<td>Nodes workers do cluster EKS</td>
 </tr>
 <tr>
-<td><code>GET /exchange?from=USD&amp;to=BRL</code></td>
-<td><code>{"rate": 6.0}</code></td>
+<td><strong>NLB</strong> (Network Load Balancer)</td>
+<td>Exposição do Gateway para a internet</td>
 </tr>
 <tr>
-<td><code>GET /exchange?from=USD&amp;to=&lt;inválido&gt;</code></td>
-<td><code>404 Not Found</code></td>
+<td><strong>ECR</strong> <em>(opcional)</em></td>
+<td>Alternativa ao Docker Hub para imagens</td>
 </tr>
 </tbody>
 </table>
-<h2 id="testes-unitarios">Testes Unitários</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cd</span><span class="w"> </span>api/order-service
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>mvn<span class="w"> </span><span class="nb">test</span>
+<blockquote>
+<p>Região utilizada: <code>us-east-2</code> (Ohio). Cluster <code>eks-store</code> ativo com node group <code>ng-store</code>.</p>
+</blockquote>
+<hr />
+<h2 id="diagrama-de-arquitetura-aws">Diagrama de Arquitetura AWS</h2>
+<pre class="mermaid"><code>graph TD
+    Internet([Internet / Cliente])
+
+    subgraph AWS["AWS — us-east-2 (Ohio)"]
+        NLB["NLB\nNetwork Load Balancer\n:80"]
+
+        subgraph VPC["VPC (subnets privadas — 2 AZs)"]
+            subgraph EKS["EKS Cluster: eks-store  |  K8s v1.32.9"]
+                subgraph SYS["kube-system"]
+                    DNS[coredns x2]
+                    METRICS[metrics-server]
+                    NODE[aws-node]
+                end
+                subgraph EXTDNS["external-dns"]
+                    EDNS[external-dns]
+                end
+                subgraph APP["default  ← pods adicionados via Jenkins"]
+                    GW[gateway]
+                    Auth[auth]
+                    Acct[account]
+                    Order[order]
+                    PG[postgres]
+                end
+                subgraph NG["Node Group: ng-store\nt3.medium × 1\nip-192-168-236-31"]
+                end
+            end
+        end
+    end
+
+    Internet --&gt;|HTTP :80| NLB
+    NLB --&gt; GW
+    GW --&gt; Auth &amp; Acct &amp; Order
+    Auth --&gt; Acct
+    Order --&gt; PG
+    Acct --&gt; PG</code></pre>
+<blockquote>
+<p><strong>Estado atual:</strong> pods do <code>kube-system</code> e <code>external-dns</code> rodando. Pods de aplicação (<code>gateway</code>, <code>auth</code>, <code>account</code>, <code>order</code>, <code>postgres</code>) serão adicionados após o deploy via Jenkins.</p>
+</blockquote>
+<hr />
+<h2 id="teardown">Teardown</h2>
+<div class="admonition warning">
+<p class="admonition-title">Cuidado com custos</p>
+<p>Recursos AWS geram custos enquanto estiverem provisionados. Após a apresentação, execute o teardown para evitar cobranças.</p>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Deletar node group (para EC2)</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>eksctl<span class="w"> </span>delete<span class="w"> </span>nodegroup<span class="w"> </span>--cluster<span class="o">=</span>eks-store<span class="w"> </span>--name<span class="o">=</span>ng-store
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Deletar cluster EKS</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>eksctl<span class="w"> </span>delete<span class="w"> </span>cluster<span class="w"> </span>--name<span class="o">=</span>eks-store
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># Verificar que não há recursos órfãos</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>aws<span class="w"> </span>ec2<span class="w"> </span>describe-instances<span class="w"> </span>--query<span class="w"> </span><span class="s1">&#39;Reservations[*].Instances[*].[InstanceId,State.Name]&#39;</span><span class="w"> </span>--output<span class="w"> </span>table
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>aws<span class="w"> </span>elb<span class="w"> </span>describe-load-balancers
 </code></pre></div>
-<p>Os 6 testes cobrem os cenários críticos de negócio:</p>
-<table>
-<thead>
-<tr>
-<th>Teste</th>
-<th>Cenário verificado</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>shouldReturn400WhenProductDoesNotExist</code></td>
-<td>Produto não encontrado → 400</td>
-</tr>
-<tr>
-<td><code>shouldReturn502WhenProductServiceIsUnavailable</code></td>
-<td>Product Service fora do ar → 502</td>
-</tr>
-<tr>
-<td><code>shouldFilterOrdersByAuthenticatedAccount</code></td>
-<td>Isolamento por conta</td>
-</tr>
-<tr>
-<td><code>shouldReturn404WhenOrderDoesNotBelongToAccount</code></td>
-<td>Pedido de outra conta → 404</td>
-</tr>
-<tr>
-<td><code>shouldReturn422WhenCurrencyIsInvalid</code></td>
-<td>Moeda inválida → 422</td>
-</tr>
-<tr>
-<td><code>shouldKeepUsdValuesWhenExchangeServiceIsUnavailable</code></td>
-<td>Exchange fora do ar → fallback USD</td>
-</tr>
-</tbody>
-</table>
-<h2 id="cicd">CI/CD</h2>
-<p>O pipeline Jenkins está em <code>api/order-service/Jenkinsfile</code> e executa 3 estágios:</p>
-<pre class="mermaid"><code>graph LR
-    A[Dependencies\ninstala módulo order] --&gt; B[Build\nmvn package]
-    B --&gt; C[Build &amp; Push Image\nhenryidesis/order:latest]</code></pre>
-<p>A imagem é publicada no Docker Hub como <code>henryidesis/order:latest</code> com suporte multi-arquitetura (<code>linux/amd64</code> + <code>linux/arm64</code>).</p>
 
 
 
