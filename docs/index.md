@@ -40,6 +40,14 @@ Plataforma de e-commerce baseada em arquitetura de microsserviços, onde usuári
 
 ---
 
+## Repositório do Grupo
+
+| Repositório | Descrição |
+|-------------|-----------|
+| [repo-classes/pma.261](https://github.com/repo-classes/pma.261) | Repositório principal do grupo (submodules) |
+
+---
+
 ## Status da Entrega
 
 | Item | Status |
@@ -52,5 +60,14 @@ Plataforma de e-commerce baseada em arquitetura de microsserviços, onde usuári
 | Gateway routing `/orders/**` | ✅ Implementado |
 | CI/CD Jenkins (order + gateway) | ✅ Implementado |
 | Mocks WireMock (product + exchange) | ✅ Implementado |
+| Observabilidade (Prometheus + Grafana) | ✅ Configurado |
+| EKS (eks-store, us-east-2) | ✅ Cluster ativo |
 | Product API | 🔜 Próxima entrega |
 | Exchange API | 🔜 Próxima entrega |
+
+---
+
+## Uso de Inteligência Artificial
+
+!!! info "Declaração de uso de IA"
+    Esta documentação e partes da implementação foram desenvolvidas com auxílio do **Claude (Anthropic)** como assistente de código e escrita técnica. Todo o conteúdo foi revisado, validado e adaptado ao contexto real do projeto por Henry Idesis. O código-fonte dos serviços reflete decisões técnicas próprias, com IA utilizada para acelerar a escrita de boilerplate, testes e documentação.

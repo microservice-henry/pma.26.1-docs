@@ -131,4 +131,4 @@ Retorna os detalhes completos de um pedido. Aceita o parâmetro opcional `curren
 ```
 
 !!! warning "Exchange indisponível"
-    Se o Exchange Service estiver fora do ar, o serviço responde `200` com os valores em USD — sem erro para o cliente. Veja [Bottleneck #1](../bottlenecks.md#1-latencia-do-exchange-service).
+    Se o Exchange Service estiver fora do ar, o serviço responde `200` com os valores em USD — sem erro para o cliente. Veja [Bottlenecks](../bottlenecks.md).

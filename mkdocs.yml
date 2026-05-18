@@ -52,3 +52,8 @@ nav:
   - Product API: product/index.md
   - Exchange API: exchange/index.md
   - Bottlenecks: bottlenecks.md
+  - Infraestrutura:
+      - AWS: infra/aws.md
+      - EKS: infra/eks.md
+      - CI/CD: infra/cicd.md
+  - Custos e SLA: custos.md
