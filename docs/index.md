@@ -84,4 +84,4 @@ Plataforma de e-commerce baseada em arquitetura de microsserviços, onde usuári
 ## Uso de Inteligência Artificial
 
 !!! info "Declaração de uso de IA"
-    Esta documentação e partes da implementação foram desenvolvidas com auxílio do **Claude (Anthropic)** como assistente de código e escrita técnica. Todo o conteúdo foi revisado, validado e adaptado ao contexto real do projeto por Henry Idesis. O código-fonte dos serviços reflete decisões técnicas próprias, com IA utilizada para acelerar a escrita de boilerplate, testes e documentação.
+    Durante o desenvolvimento, utilizamos o **Claude (Anthropic)** como ferramenta de apoio em tarefas pontuais: geração de código boilerplate, sugestões de melhoria e correção de erros. As decisões de arquitetura, a lógica de negócio e a estrutura dos serviços foram definidas e implementadas pelo grupo. Toda a documentação e o código foram revisados e validados em conjunto pelos membros, garantindo que todos compreendem e conseguem explicar cada parte do projeto.

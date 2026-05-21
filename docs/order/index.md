@@ -310,3 +310,17 @@ return (methodKey, response) -> {
 | PostgreSQL | 17 |
 | Flyway | (via Spring Boot) |
 | Docker image | `henryidesis/order:latest` |
+
+---
+
+## Apresentação em Vídeo
+
+<iframe width="100%" height="400"
+  src="https://www.youtube-nocookie.com/embed/OwebMKRjKwM"
+  title="Order API — Apresentação Individual — Henry Idesis"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
+
+[Assistir no YouTube](https://www.youtube.com/watch?v=OwebMKRjKwM){ .md-button }
