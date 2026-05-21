@@ -2,6 +2,8 @@ site_name: Order API — Henry Idesis
 site_url: https://microservice-henry.github.io/pma.26.1-docs/
 site_author: Henry Idesis
 site_description: Documentação individual — PMA 26.1 | Order API
+repo_url: https://github.com/microservice-henry/pma.261.order-service
+repo_name: pma.261.order-service
 
 theme:
   name: material
@@ -20,10 +22,9 @@ theme:
         icon: material/brightness-4
         name: Alternar para modo claro
   features:
-    - navigation.tabs
-    - navigation.tabs.sticky
     - navigation.top
     - navigation.sections
+    - navigation.expand
     - content.code.copy
     - content.code.annotate
 
