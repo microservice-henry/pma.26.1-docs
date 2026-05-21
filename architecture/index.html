@@ -71,7 +71,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="blue-grey">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -129,7 +129,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Alternar para modo escuro"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="blue-grey"  aria-label="Alternar para modo escuro"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Alternar para modo escuro" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -139,7 +139,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Alternar para modo claro"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="blue-grey"  aria-label="Alternar para modo claro"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Alternar para modo claro" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -736,17 +736,17 @@
 <h2 id="padrao-api-gateway-trusted-layer">Padrão: API Gateway + Trusted Layer</h2>
 <p>Todo tráfego externo passa pelo <strong>Gateway</strong>, que valida o JWT antes de rotear para os serviços internos. Os serviços nunca são expostos diretamente à internet — eles confiam nos headers injetados pelo Gateway.</p>
 <pre class="mermaid"><code>graph TD
-    Client([Navegador / Cliente])
+    Client([Cliente])
 
-    subgraph Internet
+    subgraph internet["Internet"]
         Client
     end
 
-    subgraph "Camada Pública"
+    subgraph public["Camada Publica"]
         GW[Gateway :8080]
     end
 
-    subgraph "Camada Confiável (trusted layer)"
+    subgraph trusted["Camada Confiavel - Trusted Layer"]
         Auth[Auth Service]
         Account[Account Service]
         Order[Order Service]
@@ -761,8 +761,8 @@
     GW --&gt;|/orders/**| Order
 
     Auth --&gt;|valida conta| Account
-    Order --&gt;|Feign: preço do produto| Product
-    Order --&gt;|Feign: taxa de câmbio| Exchange
+    Order --&gt;|Feign: preco produto| Product
+    Order --&gt;|Feign: taxa cambio| Exchange
 
     Account --&gt; DB
     Order --&gt; DB
@@ -771,76 +771,75 @@
 <h2 id="fluxo-de-autenticacao">Fluxo de Autenticação</h2>
 <p>O Gateway intercepta todas as requisições protegidas, extrai o cookie JWT e consulta o Auth Service para obter o <code>id-account</code>. Esse header é então injetado na requisição antes de encaminhá-la ao serviço destino.</p>
 <pre class="mermaid"><code>sequenceDiagram
-    actor U as Usuário
+    actor U as Usuario
     participant GW as Gateway
     participant Auth as Auth Service
-    participant SVC as Serviço (ex: Order)
+    participant SVC as Servico ex Order
 
     U-&gt;&gt;GW: POST /auth/login
     GW-&gt;&gt;Auth: POST /auth/login
-    Auth--&gt;&gt;GW: Set-Cookie: __store_jwt_token
+    Auth--&gt;&gt;GW: Set-Cookie jwt_token
     GW--&gt;&gt;U: Cookie JWT
 
-    U-&gt;&gt;GW: GET /orders (+ cookie)
-    GW-&gt;&gt;Auth: POST /auth/solve {token}
-    Auth--&gt;&gt;GW: {idAccount: "uuid"}
-    GW-&gt;&gt;SVC: GET /orders + Header: id-account=uuid
+    U-&gt;&gt;GW: GET /orders + cookie
+    GW-&gt;&gt;Auth: POST /auth/solve token
+    Auth--&gt;&gt;GW: idAccount uuid
+    GW-&gt;&gt;SVC: GET /orders + Header id-account
     SVC--&gt;&gt;GW: 200 OK
     GW--&gt;&gt;U: 200 OK</code></pre>
 <hr />
 <h2 id="fluxo-de-criacao-de-pedido">Fluxo de Criação de Pedido</h2>
 <pre class="mermaid"><code>sequenceDiagram
-    actor U as Usuário
+    actor U as Usuario
     participant GW as Gateway
     participant OS as Order Service
     participant PS as Product Service
-    participant ES as Exchange Service
     participant DB as PostgreSQL
 
-    U-&gt;&gt;GW: POST /orders (cookie JWT)
-    GW-&gt;&gt;GW: Valida JWT → extrai id-account
+    U-&gt;&gt;GW: POST /orders com cookie JWT
+    GW-&gt;&gt;GW: Valida JWT e extrai id-account
     GW-&gt;&gt;OS: POST /orders + id-account header
 
     loop para cada item
-        OS-&gt;&gt;PS: GET /products/{id}
-        PS--&gt;&gt;OS: {price: 10.12}
+        OS-&gt;&gt;PS: GET /products/id
+        PS--&gt;&gt;OS: price 10.12
     end
 
     OS-&gt;&gt;OS: Calcula total em USD
-    OS-&gt;&gt;DB: INSERT orders + order_items
+    OS-&gt;&gt;DB: INSERT orders e order_items
     DB--&gt;&gt;OS: OK
-    OS--&gt;&gt;GW: 201 Created {id, total, items}
+    OS--&gt;&gt;GW: 201 Created com id e total
     GW--&gt;&gt;U: 201 Created</code></pre>
 <hr />
 <h2 id="fluxo-de-consulta-com-conversao-de-moeda">Fluxo de Consulta com Conversão de Moeda</h2>
 <pre class="mermaid"><code>sequenceDiagram
-    actor U as Usuário
+    actor U as Usuario
     participant GW as Gateway
     participant OS as Order Service
     participant ES as Exchange Service
 
-    U-&gt;&gt;GW: GET /orders/{id}?currency=BRL
-    GW-&gt;&gt;OS: GET /orders/{id}?currency=BRL
+    U-&gt;&gt;GW: GET /orders/id?currency=BRL
+    GW-&gt;&gt;OS: GET /orders/id?currency=BRL
 
-    OS-&gt;&gt;OS: Busca pedido no banco (USD)
+    OS-&gt;&gt;OS: Busca pedido no banco em USD
     OS-&gt;&gt;ES: GET /exchange?from=USD&amp;to=BRL
-    alt Exchange disponível
-        ES--&gt;&gt;OS: {rate: 6.0}
-        OS-&gt;&gt;OS: total × 6.0
-        OS--&gt;&gt;GW: 200 {currency: BRL, total: 121.44}
-    else Exchange indisponível
-        OS--&gt;&gt;GW: 200 {currency: USD, total: 20.24} ← fallback
+    alt Exchange disponivel
+        ES--&gt;&gt;OS: rate 6.0
+        OS-&gt;&gt;OS: total x 6.0
+        OS--&gt;&gt;GW: 200 currency BRL total 121.44
+    else Exchange indisponivel
+        OS--&gt;&gt;GW: 200 currency USD total 20.24 fallback
     end
     GW--&gt;&gt;U: 200 OK</code></pre>
 <hr />
 <h2 id="topologia-de-rede-docker-compose">Topologia de Rede (Docker Compose)</h2>
 <pre class="mermaid"><code>graph LR
-    subgraph "Host"
-        P8080[":8080"]
-        P8085[":8085"]
+    subgraph host["Host"]
+        P8080[porta 8080]
+        P8085[porta 8085]
     end
 
-    subgraph "app-net (rede interna Docker)"
+    subgraph appnet["app-net - rede interna Docker"]
         GW[gateway]
         Auth[auth]
         Account[account]
@@ -852,8 +851,12 @@
 
     P8080 --&gt; GW
     P8085 --&gt; Order
-    GW --&gt; Auth &amp; Account &amp; Order
-    Order --&gt; Product &amp; Exchange &amp; DB
+    GW --&gt; Auth
+    GW --&gt; Account
+    GW --&gt; Order
+    Order --&gt; Product
+    Order --&gt; Exchange
+    Order --&gt; DB
     Auth --&gt; Account
     Account --&gt; DB</code></pre>
 <p>Os serviços se comunicam pelo hostname interno (<code>order</code>, <code>account</code>, etc.). Apenas o Gateway e o Order service têm portas expostas no host.</p>
@@ -941,7 +944,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "navigation.sections", "navigation.expand", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.sections", "navigation.expand", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
