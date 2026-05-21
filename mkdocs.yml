@@ -45,16 +45,9 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Apresentação: presentation.md
-  - Arquitetura: architecture.md
-  - Order API:
+  - API Reference:
       - Visão Geral: order/index.md
       - Endpoints: order/endpoints.md
-      - Como Rodar: order/run.md
-  - Product API: product/index.md
-  - Exchange API: exchange/index.md
+  - Arquitetura: architecture.md
   - Bottlenecks: bottlenecks.md
-  - Infraestrutura:
-      - AWS: infra/aws.md
-      - EKS: infra/eks.md
-      - CI/CD: infra/cicd.md
-  - Custos e SLA: custos.md
+  - Desenvolvimento: order/run.md

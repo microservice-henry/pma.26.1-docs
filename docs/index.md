@@ -1,83 +1,50 @@
-# Plataforma de Microsserviços
+# Order API — Henry Idesis
 
 **Aluno:** Henry Idesis  
-**Entrega:** Individual — PMA 26.1  
-**Disciplina:** Plataformas, Microsserviços, DevOps e APIs — Insper 2026.1
+**Grupo:** Henry Idesis, Nathan, Kauã  
+**Disciplina:** Plataformas, Microsserviços, DevOps e APIs — Insper 2026.1  
+**Instrutor:** Humberto Sandmann
 
 ---
 
 ## Sobre o Projeto
 
-Plataforma de e-commerce baseada em arquitetura de microsserviços, onde usuários autenticados podem criar e consultar pedidos com suporte a múltiplas moedas. Esta entrega cobre o desenvolvimento da **Order API** e sua integração com o Gateway.
+Plataforma de e-commerce baseada em arquitetura de microsserviços. Minha responsabilidade individual foi o desenvolvimento da **Order API** — o serviço responsável por criar e consultar pedidos com suporte a múltiplas moedas.
+
+---
+
+## Entregas
+
+| Atividade | Status | Repositório |
+|-----------|--------|-------------|
+| Order API (contrato) | ✅ Concluído | [pma.261.order](https://github.com/microservice-henry/pma.261.order) |
+| Order Service (implementação) | ✅ Concluído | [pma.261.order-service](https://github.com/microservice-henry/pma.261.order-service) |
+| Gateway routing `/orders/**` | ✅ Concluído | [pma.261.gateway-service](https://github.com/microservice-henry/pma.261.gateway-service) |
+| CI/CD Jenkins | ✅ Concluído | — |
+| Bottleneck: Resiliência (fallback Exchange) | ✅ Implementado e medido | — |
+| Bottleneck: Observabilidade (Prometheus + Grafana) | ✅ Implementado e medido | — |
+| Bottleneck: Índices no banco | ✅ Implementado e medido | — |
 
 ---
 
 ## Repositórios
 
-| Serviço | Repositório | Status |
-|---------|-------------|--------|
-| Plataforma (raiz) | [pma.26.1](https://github.com/microservice-henry/pma.26.1) | ✅ |
-| Order (contrato) | [pma.261.order](https://github.com/microservice-henry/pma.261.order) | ✅ |
-| Order Service | [pma.261.order-service](https://github.com/microservice-henry/pma.261.order-service) | ✅ |
-| Gateway Service | [pma.261.gateway-service](https://github.com/microservice-henry/pma.261.gateway-service) | ✅ |
-| Account Service | [pma.261.account-service](https://github.com/microservice-henry/pma.26.1.account-service) | ✅ |
-| Auth Service | [pma.261.auth-service](https://github.com/microservice-henry/pma.261.auth-service) | ✅ |
+| Serviço | Repositório |
+|---------|-------------|
+| Order (contrato) | [pma.261.order](https://github.com/microservice-henry/pma.261.order) |
+| Order Service | [pma.261.order-service](https://github.com/microservice-henry/pma.261.order-service) |
+| Gateway Service | [pma.261.gateway-service](https://github.com/microservice-henry/pma.261.gateway-service) |
+| Account Service | [pma.26.1.account-service](https://github.com/microservice-henry/pma.26.1.account-service) |
+| Auth Service | [pma.261.auth-service](https://github.com/microservice-henry/pma.261.auth-service) |
+| Plataforma (raiz do grupo) | [pma.26.1](https://github.com/microservice-henry/pma.26.1) |
 
 ---
 
-## Stack Tecnológico
+## Documentação do Grupo
 
-| Camada | Tecnologia |
-|--------|-----------|
-| Linguagem | Java 25 |
-| Framework | Spring Boot 4.0.3 |
-| Comunicação entre serviços | Spring Cloud OpenFeign |
-| Banco de dados | PostgreSQL 17 |
-| Migrations | Flyway |
-| Mocks de dependências | WireMock 3.3.1 |
-| Containerização | Docker / Docker Compose |
-| CI/CD | Jenkins |
+A documentação da infraestrutura compartilhada (AWS, EKS, CI/CD, Custos) e dos demais microsserviços está na **documentação do grupo**:
 
----
-
-## Repositório do Grupo
-
-| Repositório | Descrição |
-|-------------|-----------|
-| [repo-classes/pma.261](https://github.com/repo-classes/pma.261) | Repositório principal do grupo (submodules) |
-
----
-
-## Status da Entrega
-
-| Item | Status |
-|------|--------|
-| `POST /orders` | ✅ Implementado |
-| `GET /orders` | ✅ Implementado |
-| `GET /orders/{id}` com conversão de moeda | ✅ Implementado |
-| Isolamento por conta autenticada | ✅ Implementado |
-| Testes unitários (6 casos) | ✅ Implementado |
-| Gateway routing `/orders/**` | ✅ Implementado |
-| CI/CD Jenkins (order + gateway) | ✅ Implementado |
-| Mocks WireMock (product + exchange) | ✅ Implementado |
-| Observabilidade (Prometheus + Grafana) | ✅ Configurado |
-| EKS (eks-store, us-east-2) | ✅ Cluster ativo |
-| Product API | 🔜 Próxima entrega |
-| Exchange API | 🔜 Próxima entrega |
-
----
-
-## Vídeo de Apresentação
-
-<iframe width="100%" height="400"
-  src="https://www.youtube-nocookie.com/embed/OwebMKRjKwM"
-  title="Order API — Apresentação Individual — Henry Idesis"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen>
-</iframe>
-
-[Assistir no YouTube](https://www.youtube.com/watch?v=OwebMKRjKwM){ .md-button }
+[microservice-henry.github.io/pma.26.1](https://microservice-henry.github.io/pma.26.1/){ .md-button }
 
 ---
 
