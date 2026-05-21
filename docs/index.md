@@ -67,6 +67,20 @@ Plataforma de e-commerce baseada em arquitetura de microsserviços, onde usuári
 
 ---
 
+## Vídeo de Apresentação
+
+<iframe width="100%" height="400"
+  src="https://www.youtube-nocookie.com/embed/OwebMKRjKwM"
+  title="Order API — Apresentação Individual — Henry Idesis"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
+
+[Assistir no YouTube](https://www.youtube.com/watch?v=OwebMKRjKwM){ .md-button }
+
+---
+
 ## Uso de Inteligência Artificial
 
 !!! info "Declaração de uso de IA"
