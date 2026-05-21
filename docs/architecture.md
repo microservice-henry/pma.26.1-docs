@@ -6,17 +6,17 @@ Todo tráfego externo passa pelo **Gateway**, que valida o JWT antes de rotear p
 
 ```mermaid
 graph TD
-    Client([Navegador / Cliente])
+    Client([Cliente])
 
-    subgraph Internet
+    subgraph internet["Internet"]
         Client
     end
 
-    subgraph "Camada Pública"
+    subgraph public["Camada Publica"]
         GW[Gateway :8080]
     end
 
-    subgraph "Camada Confiável (trusted layer)"
+    subgraph trusted["Camada Confiavel - Trusted Layer"]
         Auth[Auth Service]
         Account[Account Service]
         Order[Order Service]
@@ -31,8 +31,8 @@ graph TD
     GW -->|/orders/**| Order
 
     Auth -->|valida conta| Account
-    Order -->|Feign: preço do produto| Product
-    Order -->|Feign: taxa de câmbio| Exchange
+    Order -->|Feign: preco produto| Product
+    Order -->|Feign: taxa cambio| Exchange
 
     Account --> DB
     Order --> DB
@@ -47,20 +47,20 @@ O Gateway intercepta todas as requisições protegidas, extrai o cookie JWT e co
 
 ```mermaid
 sequenceDiagram
-    actor U as Usuário
+    actor U as Usuario
     participant GW as Gateway
     participant Auth as Auth Service
-    participant SVC as Serviço (ex: Order)
+    participant SVC as Servico ex Order
 
     U->>GW: POST /auth/login
     GW->>Auth: POST /auth/login
-    Auth-->>GW: Set-Cookie: __store_jwt_token
+    Auth-->>GW: Set-Cookie jwt_token
     GW-->>U: Cookie JWT
 
-    U->>GW: GET /orders (+ cookie)
-    GW->>Auth: POST /auth/solve {token}
-    Auth-->>GW: {idAccount: "uuid"}
-    GW->>SVC: GET /orders + Header: id-account=uuid
+    U->>GW: GET /orders + cookie
+    GW->>Auth: POST /auth/solve token
+    Auth-->>GW: idAccount uuid
+    GW->>SVC: GET /orders + Header id-account
     SVC-->>GW: 200 OK
     GW-->>U: 200 OK
 ```
@@ -71,26 +71,25 @@ sequenceDiagram
 
 ```mermaid
 sequenceDiagram
-    actor U as Usuário
+    actor U as Usuario
     participant GW as Gateway
     participant OS as Order Service
     participant PS as Product Service
-    participant ES as Exchange Service
     participant DB as PostgreSQL
 
-    U->>GW: POST /orders (cookie JWT)
-    GW->>GW: Valida JWT → extrai id-account
+    U->>GW: POST /orders com cookie JWT
+    GW->>GW: Valida JWT e extrai id-account
     GW->>OS: POST /orders + id-account header
 
     loop para cada item
-        OS->>PS: GET /products/{id}
-        PS-->>OS: {price: 10.12}
+        OS->>PS: GET /products/id
+        PS-->>OS: price 10.12
     end
 
     OS->>OS: Calcula total em USD
-    OS->>DB: INSERT orders + order_items
+    OS->>DB: INSERT orders e order_items
     DB-->>OS: OK
-    OS-->>GW: 201 Created {id, total, items}
+    OS-->>GW: 201 Created com id e total
     GW-->>U: 201 Created
 ```
 
@@ -100,22 +99,22 @@ sequenceDiagram
 
 ```mermaid
 sequenceDiagram
-    actor U as Usuário
+    actor U as Usuario
     participant GW as Gateway
     participant OS as Order Service
     participant ES as Exchange Service
 
-    U->>GW: GET /orders/{id}?currency=BRL
-    GW->>OS: GET /orders/{id}?currency=BRL
+    U->>GW: GET /orders/id?currency=BRL
+    GW->>OS: GET /orders/id?currency=BRL
 
-    OS->>OS: Busca pedido no banco (USD)
+    OS->>OS: Busca pedido no banco em USD
     OS->>ES: GET /exchange?from=USD&to=BRL
-    alt Exchange disponível
-        ES-->>OS: {rate: 6.0}
-        OS->>OS: total × 6.0
-        OS-->>GW: 200 {currency: BRL, total: 121.44}
-    else Exchange indisponível
-        OS-->>GW: 200 {currency: USD, total: 20.24} ← fallback
+    alt Exchange disponivel
+        ES-->>OS: rate 6.0
+        OS->>OS: total x 6.0
+        OS-->>GW: 200 currency BRL total 121.44
+    else Exchange indisponivel
+        OS-->>GW: 200 currency USD total 20.24 fallback
     end
     GW-->>U: 200 OK
 ```
@@ -126,12 +125,12 @@ sequenceDiagram
 
 ```mermaid
 graph LR
-    subgraph "Host"
-        P8080[":8080"]
-        P8085[":8085"]
+    subgraph host["Host"]
+        P8080[porta 8080]
+        P8085[porta 8085]
     end
 
-    subgraph "app-net (rede interna Docker)"
+    subgraph appnet["app-net - rede interna Docker"]
         GW[gateway]
         Auth[auth]
         Account[account]
@@ -143,8 +142,12 @@ graph LR
 
     P8080 --> GW
     P8085 --> Order
-    GW --> Auth & Account & Order
-    Order --> Product & Exchange & DB
+    GW --> Auth
+    GW --> Account
+    GW --> Order
+    Order --> Product
+    Order --> Exchange
+    Order --> DB
     Auth --> Account
     Account --> DB
 ```
